@@ -47,32 +47,41 @@
             // btnRun
             // 
             this.btnRun.BackColor = System.Drawing.Color.Red;
-            this.btnRun.Font = new System.Drawing.Font("굴림", 30F);
+            this.btnRun.Font = new System.Drawing.Font("굴림", 25F);
             this.btnRun.ForeColor = System.Drawing.Color.White;
             this.btnRun.Location = new System.Drawing.Point(12, 69);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(166, 88);
+            this.btnRun.Size = new System.Drawing.Size(102, 88);
             this.btnRun.TabIndex = 1;
             this.btnRun.Text = "실행";
             this.btnRun.UseVisualStyleBackColor = false;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnEnd
             // 
-            this.btnEnd.Location = new System.Drawing.Point(184, 69);
+            this.btnEnd.BackColor = System.Drawing.Color.Green;
+            this.btnEnd.Font = new System.Drawing.Font("굴림", 25F);
+            this.btnEnd.ForeColor = System.Drawing.Color.White;
+            this.btnEnd.Location = new System.Drawing.Point(120, 69);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(147, 42);
+            this.btnEnd.Size = new System.Drawing.Size(105, 88);
             this.btnEnd.TabIndex = 2;
             this.btnEnd.Text = "멈춤";
-            this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.UseVisualStyleBackColor = false;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(184, 115);
+            this.btnReset.BackColor = System.Drawing.Color.Orange;
+            this.btnReset.Font = new System.Drawing.Font("굴림", 25F);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(231, 69);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(147, 42);
+            this.btnReset.Size = new System.Drawing.Size(102, 88);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "리셋";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lblStatus
             // 
@@ -82,6 +91,10 @@
             this.lblStatus.Size = new System.Drawing.Size(41, 12);
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "상태 : ";
+            // 
+            // Timer
+            // 
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // Form1
             // 
@@ -97,6 +110,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "상태진행";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
